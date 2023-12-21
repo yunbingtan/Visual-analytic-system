@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://d3js.org/d3.v7.min.js"></script>
+ <title>COMP 178 - final project</title>
+
+ <!-- Load Google Font -->
+ <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+
+ <!-- Custom CSS code -->
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 class="big-title">Traffic Patterns through the Preserve</h1>
+  <div class="content">
+    <div class="left">
+        <div class="density-map" id="densityMap"></div>
+        <div class="timeline" id="timeline"></div>
+    </div>
+    <div class="right">
+      <div class="checkboxes">
+        <label><input type="checkbox" name="season" value="spring"> Spring</label>
+        <label><input type="checkbox" name="season" value="summer"> Summer</label>
+        <label><input type="checkbox" name="season" value="fall"> Fall</label>
+        <label><input type="checkbox" name="season" value="winter"> Winter</label>
+        <label><input type="checkbox" name="car_type" value="ranger"> Ranger</label>
+        <label><input type="checkbox" name="car_type" value="visitor"> Visitor</label>
+      </div>
+      <div class="pie-charts">
+        <div class="pie-chart" id="pieChart1"></div>
+        <div class="pie-chart" id="pieChart2"></div>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-chart-legend" id="bar-chart-legend"></div>
+        <div class="bar-chart-svg" id="bar-chart"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/densityMap.js"></script>
+  <script src="js/barChart.js"></script>
+  <script src="js/pieChart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/timeline.js"></script>
+</body>
+</html>
