@@ -102,8 +102,8 @@ function drawBarChart(data) {
     .text("Average stay time (min)")
   
     // Legend
-  var y1_classes = [{type: "Number of vehicles (day)", color:d3.schemePastel1[8]} , 
-      {type:"Number of vehicles (night)", color:d3.schemeTableau10[0]}]
+  var y1_classes = [{type: "Day", color:d3.schemePastel1[8]} , 
+      {type:"Night", color:d3.schemeTableau10[0]}]
   
 
   // draw the colored dots
@@ -114,7 +114,7 @@ function drawBarChart(data) {
     // TO DO: FINISH THESE
     // Hint for cx: you might want to utilize i (the index being iterated on for the current datum)
     // .attr("cx", function(d, i) {return 50+i*10})
-    .attr("x", function (d, i) {return i * 170-50})
+    .attr("x", function (d, i) {return i * 50-40})
     .attr("y", 2)
     .attr("width", 10)
     .attr("height", 10)
@@ -127,7 +127,7 @@ function drawBarChart(data) {
       .data(y1_classes)
       .enter()
       .append("text")
-      .attr("x", function(d, i) {return i * 170-35})             
+      .attr("x", function(d, i) {return i * 50-25})             
       .attr("y", 8)
       .style("font", "12px sans-serif")
       .attr("alignment-baseline","middle")
@@ -138,25 +138,25 @@ function drawBarChart(data) {
       // TO DO: FINISH THESE
       // Hint for cx: you might want to utilize i (the index being iterated on for the current datum)
       // .attr("cx", function(d, i) {return 50+i*10})
-      .attr("cx", 300)
+      .attr("cx", 380)
       .attr("cy", 8)
       .attr("r", 5)
       .style("fill", d3.schemeTableau10[1])
 
   barLegend.append("line")
-    .attr("x1", 290)
+    .attr("x1", 370)
     .attr("y1", 8)
-    .attr("x2", 310)
+    .attr("x2", 390)
     .attr("y2", 8)
     .attr("stroke-width", 2)
     .attr("stroke", d3.schemeTableau10[1])
   
-  barLegend.append("text")
-    .attr("x", 315)
-    .attr("y", 8)
-    .style("font", "12px sans-serif")
-    .attr("alignment-baseline","middle")
-    .text("Average stay time");
+  // barLegend.append("text")
+  //   .attr("x", 315)
+  //   .attr("y", 8)
+  //   .style("font", "12px sans-serif")
+  //   .attr("alignment-baseline","middle")
+  //   .text("Average stay time");
   
   const dayBars = barChart
     .selectAll(".total")
